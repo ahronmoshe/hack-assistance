@@ -11,3 +11,4 @@ https://github.com/AlessandroZ/LaZagne.git
 
 
 https://docs.microsoft.com/en-us/sysinternals/
+apt -y install seclists
