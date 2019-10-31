@@ -11,5 +11,9 @@ https://github.com/aboul3la/Sublist3r.git
 https://github.com/meliot/shcheck.git
 
 
+git clone --depth 1 https://github.com/andresriancho/w3af.git
+
+
 https://docs.microsoft.com/en-us/sysinternals/
+https://github.com/zaproxy/zaproxy/wiki/Downloads
 apt -y install seclists
