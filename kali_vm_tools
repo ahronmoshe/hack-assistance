@@ -1,0 +1,12 @@
+cat <<EOF > /usr/local/sbin/restart-vm-tools
+#!/bin/sh
+systemctl stop run-vmblock\\\\x2dfuse.mount
+sudo killall -q -w vmtoolsd
+systemctl start run-vmblock\\\\x2dfuse.mount
+systemctl enable run-vmblock\\\\x2dfuse.mount
+sudo vmware-user-suid-wrapper vmtoolsd -n vmusr 2>/dev/null
+sudo vmtoolsd -b /var/run/vmroot 2>/dev/null
+EOF
+sudo chmod +x /usr/local/sbin/restart-vm-tools
+ln -sf /usr/local/sbin/restart-vm-tools ~/Desktop/restart-vm-tools
+gsettings set org.gnome.nautilus.preferences executable-text-activation 'ask'
