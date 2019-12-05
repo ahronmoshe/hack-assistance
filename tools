@@ -1,4 +1,4 @@
-https://github.com/Tuhinshubhra/RED_HAWK
+https://github.com/Tuhinshubhra/RED_HAWK.git
 https://github.com/laramies/theHarvester.git
 https://github.com/danielmiessler/SecLists.git
 https://github.com/rebootuser/LinEnum.git
@@ -9,12 +9,5 @@ https://github.com/EmpireProject/Empire.git
 https://github.com/AlessandroZ/LaZagne.git
 https://github.com/aboul3la/Sublist3r.git
 https://github.com/meliot/shcheck.git
-https://github.com/rasta-mouse/Watson
+https://github.com/rasta-mouse/Watson.git
 
-
-git clone --depth 1 https://github.com/andresriancho/w3af.git
-
-
-https://docs.microsoft.com/en-us/sysinternals/
-https://github.com/zaproxy/zaproxy/wiki/Downloads
-apt -y install seclists
