@@ -3,6 +3,7 @@ adb
 ads
 applescript
 au3
+mysql
 pdf
 db
 config
@@ -132,7 +133,6 @@ htc
 ssh
 sh
 pub
-
 ppk
 htm
 html
