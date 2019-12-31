@@ -14,3 +14,14 @@ for i in $(cat /root/dpkgkali.txt)
 do 
 	apt -y install $i
 done
+echo "***********************";
+echo "finish to install tools"; 
+echo "***********************";
+wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/wget -O /root/wget.txt
+for i in $(cat /root/wget.txt)
+do
+	wget $i
+done
+echo "************************";
+echo "finish to download tools"; 
+echo "************************";
