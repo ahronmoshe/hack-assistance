@@ -22,6 +22,14 @@ for i in $(cat /root/wget.txt)
 do
 	wget $i
 done
-echo "************************";
+echo "***********************";
 echo "finish to download tools"; 
+echo "***********************";
+wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/pip3 -O /root/pip3.txt
+for i in $(cat /root/wget.txt)
+do
+	pip3 install $i
+done
+echo "************************";
+echo "finish to pip3 tools"; 
 echo "************************";
