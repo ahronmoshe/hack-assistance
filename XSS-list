@@ -6,6 +6,7 @@
 ';alert(1);'
 "><script>alert(1)</script>
 /"><script>alert(1)</script>
+%3C%20script%3Ealert(1)%3C%20/script%3E
 <script>alert(123);</script>
 <ScRipT>alert("XSS");</ScRipT>
 <script>alert(123)</script>
