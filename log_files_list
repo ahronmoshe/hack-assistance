@@ -7,3 +7,33 @@
 /etc/apache/conf/httpd.conf
 /proc/self/fd
 /inetpub/logs/LogFiles/W3SVC1/u_ex200414.log
+windows/repair/SAM
+%SYSTEMROOT%/repair/SAM
+%SYSTEMROOT%/System32/config/RegBack/SAM
+%SYSTEMROOT%/System32/config/SAM  
+%SYSTEMROOT%/repair/system
+%SYSTEMROOT%/System32/config/SYSTEM
+%SYSTEMROOT%/System32/config/RegBack/system
+WINDOWS/TEMP/  
+php/sessions/ 
+php5/sessions/  
+php4/sessions/
+/Program Files/Apache Group/Apache/logs/access.log  
+/Program Files/Apache Group/Apache/logs/error.log
+/WINDOWS/system32/eula.txt
+/boot.ini  
+/WINDOWS/win.ini  
+/WINNT/win.ini  
+/WINDOWS/Repair/SAM  
+/WINDOWS/php.ini  
+/WINNT/php.ini  
+/Program Files/Apache Group/Apache/conf/httpd.conf  
+/Program Files/Apache Group/Apache2/conf/httpd.conf  
+/Program Files/xampp/apache/conf/httpd.conf  
+/php/php.ini  
+/php5/php.ini  
+/php4/php.ini  
+/apache/php/php.ini  
+/xampp/apache/bin/php.ini  
+/home2/bin/stable/apache/php.ini  
+/home/bin/stable/apache/php.ini
