@@ -6,3 +6,4 @@
 /var/www/mgr/logs/error.log
 /etc/apache/conf/httpd.conf
 /proc/self/fd
+/inetpub/logs/LogFiles/W3SVC1/u_ex200414.log
