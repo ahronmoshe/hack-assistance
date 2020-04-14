@@ -1,0 +1,8 @@
+/var/log/apache2/access.log
+/var/www/logs/access_log
+/var/www/logs/access.log
+/var/www/storage/logs/laravel.log
+/var/www/logs/error_log
+/var/www/mgr/logs/error.log
+/etc/apache/conf/httpd.conf
+/proc/self/fd
