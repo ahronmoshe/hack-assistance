@@ -37,3 +37,12 @@ php4/sessions/
 /xampp/apache/bin/php.ini  
 /home2/bin/stable/apache/php.ini  
 /home/bin/stable/apache/php.ini
+WINDOWS/system32/drivers/etc/hosts
+WINDOWS/system32/win.ini
+WINDOWS/system32/debug/NetSetup.log
+WINDOWS/system32/config/AppEvent.Evt
+WINDOWS/system32/config/SecEvent.Evt
+WINDOWS/Panther/unattend.txt
+WINDOWS/Panther/unattend.xml
+WINDOWS/Panther/unattended.xml
+WINDOWS/Panther/sysprep.inf
