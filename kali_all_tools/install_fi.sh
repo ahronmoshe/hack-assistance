@@ -1,34 +1,37 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/tools -O /root/tools.txt
-mkdir /root/tools
-cd /root/tools
-for i in $(cat /root/tools.txt)
+if [ -z $1 ] 
+then
+        echo "enter the location to install the files";
+        exit;
+fi 
+mkdir $1/tools
+cp * $1/tools
+cd $1/tools
+for i in $(cat git)
 do
-	git clone $i
+        git clone $i
 done
 echo "****************************************";
 echo "finish to download the tools from Github"; 
 echo "****************************************";
-wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/dpkgkali -O /root/dpkgkali.txt
-for i in $(cat /root/dpkgkali.txt)
+for i in $(cat dpkgkali)
 do 
-	apt -y install $i
+        apt -y install $i
 done
 echo "***********************";
 echo "finish to install tools"; 
 echo "***********************";
-wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/wget -O /root/wget.txt
-for i in $(cat /root/wget.txt)
+for i in $(cat wget)
 do
-	wget $i
+        wget $i
 done
 echo "***********************";
 echo "finish to download tools"; 
 echo "***********************";
-wget https://raw.githubusercontent.com/ahronmoshe/hack-assistance/master/pip3 -O /root/pip3.txt
-for i in $(cat /root/wget.txt)
+apt install python3-pip
+for i in $(cat pip3)
 do
-	pip3 install $i
+        pip3 install $i
 done
 echo "************************";
 echo "finish to pip3 tools"; 
