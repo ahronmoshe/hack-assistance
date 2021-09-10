@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import sys
+
+website=str(sys.argv[1])
+print("This is the argument "+ website)
+print("")
+print("wfuzz -w /root/tools/SecLists/Discovery/Web-Content/big.txt -z list,php-sh-bak-html-js-php.bak --hc 404  -u "+website+"/FUZZ.FUZ2Z -c")
+print("dirb "+website+" /usr/share/wordlists/dirb/big.txt -X .php") 
+print("gobuster dir -u "+website+ "-w /root/tools/SecLists/Discovery/Web-Content/big.txt  --no-error")
+print("dirsearch  -u "+website+ "-w /root/tools/SecLists/Discovery/Web-Content/big.txt")
