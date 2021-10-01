@@ -1,10 +1,41 @@
 #!/usr/bin/python3
+''' search with extantion and not extantion'''
 import sys
+from termcolor import colored
+try:
+        website="http://192.168.5.8/"#str(sys.argv[1])
+        if ("http" not in website) and ("https" not in website):
+                website="http://"+website
+        if not website[-1]=='/':
+                website=website+'/'
 
-website=str(sys.argv[1])
-print("This is the argument "+ website)
-print("")
-print("wfuzz -w /root/tools/SecLists/Discovery/Web-Content/big.txt -z list,php-sh-bak-html-js-php.bak --hc 404  -u "+website+"/FUZZ.FUZ2Z -c")
-print("dirb "+website+" /usr/share/wordlists/dirb/big.txt -X .php") 
-print("gobuster dir -u "+website+ "-w /root/tools/SecLists/Discovery/Web-Content/big.txt  --no-error")
-print("dirsearch  -u "+website+ "-w /root/tools/SecLists/Discovery/Web-Content/big.txt")
+        wordlist = ['/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt',
+                    '/root/tools/SecLists/Discovery/Web-Content/big.txt',""]
+
+        for i in wordlist:
+            g=colored(i.split('/')[-1],'red')
+            if i:
+                print("")
+                print("@@@@@@@@@@@@ With The List "+g+" "+"@" *23)
+                print("")
+                print("wfuzz -w " + i + "  --hc 404  -u " + website + "FUZZ")
+                print("dirb " + website + " " + i)
+                print("gobuster dir -u " + website + " -w " + i + "  --no-error")
+                print("dirsearch  -u " + website + " -w " + i)
+
+                print("")
+                print("@@@@@@@@@@@@ With The List " + g + " And "+colored('Extension','yellow')+" @@@@@@@@@")
+                print("")
+                print("wfuzz -w " + i + " -z list,txt-php-sh-bak-html-js-php.bak --hc 404  -u " + website + "FUZZ.FUZZ")
+                print("dirb " + website + " " + i + " -X php,txt,sh,js,html,exe")
+                print("gobuster dir -u " + website + " -w " + i + "  --no-error -x asp,aspx,php,txt,exe,html,js,sh")
+                print("dirsearch  -u " + website + " -w " + i + " -e php,html,js,asp,aspx,txt,exe,sh")
+            else:
+                print("")
+                print("@@@@@@@@@@@@ With The Default List @@@@@@@@@")
+                print("")
+                print("dirb " + website)
+                print("dirsearch  -u " + website )
+
+except:
+        print("Enter website/IP")
