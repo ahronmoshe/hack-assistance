@@ -11,7 +11,7 @@ try:
 
         wordlist = ['/root/tools/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt',
                     '/root/tools/SecLists/Discovery/Web-Content/big.txt',
-                    '/root/tools/SecLists/Discovery/Web-Content/raft-large-directories-lowercase.txt']
+                    '/root/tools/SecLists/Discovery/Web-Content/raft-large-directories-lowercase.txt',""]
 
         for i in wordlist:
             g=colored(i.split('/')[-1],'red')
