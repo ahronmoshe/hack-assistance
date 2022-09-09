@@ -3,14 +3,15 @@
 import sys
 from termcolor import colored
 try:
-        website="http://192.168.5.8/"#str(sys.argv[1])
+        website=str(sys.argv[1])
         if ("http" not in website) and ("https" not in website):
                 website="http://"+website
         if not website[-1]=='/':
                 website=website+'/'
 
-        wordlist = ['/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt',
-                    '/root/tools/SecLists/Discovery/Web-Content/big.txt',""]
+        wordlist = ['/root/tools/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt',
+                    '/root/tools/SecLists/Discovery/Web-Content/big.txt',
+                    '/root/tools/SecLists/Discovery/Web-Content/raft-large-directories-lowercase.txt']
 
         for i in wordlist:
             g=colored(i.split('/')[-1],'red')
@@ -18,6 +19,7 @@ try:
                 print("")
                 print("@@@@@@@@@@@@ With The List "+g+" "+"@" *23)
                 print("")
+                print("ffuf -c -w " +i + " -u "+ website +"FUZZ")
                 print("wfuzz -w " + i + "  --hc 404  -u " + website + "FUZZ")
                 print("dirb " + website + " " + i)
                 print("gobuster dir -u " + website + " -w " + i + "  --no-error")
@@ -26,6 +28,7 @@ try:
                 print("")
                 print("@@@@@@@@@@@@ With The List " + g + " And "+colored('Extension','yellow')+" @@@@@@@@@")
                 print("")
+                print("ffuf -c -w " +i + " -u "+ website +"FUZZ  -e '.asp,.aspx,.php,.txt,.exe,.html,.js,.sh'")
                 print("wfuzz -w " + i + " -z list,txt-php-sh-bak-html-js-php.bak --hc 404  -u " + website + "FUZZ.FUZZ")
                 print("dirb " + website + " " + i + " -X php,txt,sh,js,html,exe")
                 print("gobuster dir -u " + website + " -w " + i + "  --no-error -x asp,aspx,php,txt,exe,html,js,sh")
