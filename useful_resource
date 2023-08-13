@@ -19,9 +19,8 @@ cloud PT
     Azure:
     https://github.com/XMCyber/XMGoat
     https://github.com/ine-labs/AzureGoat
+    https://github.com/rootsecdev/Azure-Red-Team/tree/master
 
-General 
-https://github.com/N7WEra/PublicVulnerableMachines
 
 code:
 https://github.com/cider-security-research/cicd-goat
@@ -31,6 +30,7 @@ https://github.com/kraken-ng/Kraken
 
 Red Team:
 https://github.com/SecuraBV/RedWizard
+https://github.com/N7WEra/PublicVulnerableMachines
 
 Microsoft 365:
 https://github.com/mbrg/power-pwn
