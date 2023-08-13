@@ -1,2 +1,43 @@
-one line script 
+one-line script 
 https://github.com/0xPugazh/One-Liners
+
+cloud PT 
+    AWS:
+    https://github.com/RhinoSecurityLabs/cloudgoat
+    https://github.com/m6a-UdS/dvca
+    https://github.com/we45/DVFaaS-Damn-Vulnerable-Functions-as-a-Service
+    https://github.com/OWASP/DVSA
+    https://github.com/ine-labs/AWSGoat
+    
+    Kubernetes 
+    https://www.bustakube.com/answer-key
+    https://github.com/madhuakula/kubernetes-goat
+    
+    GCP:
+    https://gcpgoat.joshuajebaraj.com/about.html
+    
+    Azure:
+    https://github.com/XMCyber/XMGoat
+    https://github.com/ine-labs/AzureGoat
+
+General 
+https://github.com/N7WEra/PublicVulnerableMachines
+
+code:
+https://github.com/cider-security-research/cicd-goat
+
+webshell
+https://github.com/kraken-ng/Kraken
+
+Red Team:
+https://github.com/SecuraBV/RedWizard
+
+Microsoft 365:
+https://github.com/mbrg/power-pwn
+
+bypass EDR/AV
+https://github.com/deepinstinct/ContainYourself
+
+black Hat
+https://github.com/onhexgroup/Conferences/tree/main/Black%20Hat%20USA%202023%20slides
+
