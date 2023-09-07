@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Define patterns to search for (add more as needed)
+patterns=(
+    '[0-9]{3}-[0-9]{2}-[0-9]{4}'          # Social Security Numbers (###-##-####)
+    '[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}'  # Credit Card Numbers (####-####-####-####)
+    '[0-9]{16}'                           # 16-digit Numbers (for possible credit card numbers)
+    '[0-9]{3,4}-[0-9]{3,4}-[0-9]{3,4}'    # Phone Numbers (###-###-### or ####-####-####)
+    '[0-9]{10,16}'                        # Phone Numbers (##########)
+    'password'                            # Common string 'password'
+    'secret'                              # Common string 'secret'
+    'apikey [a-zA-Z0-9_-]+'               # API keys (assuming alphanumeric with _ and -)
+    'token [a-zA-Z0-9_-]+'                # Tokens (assuming alphanumeric with _ and -)
+    'email [A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' # Email addresses
+    'username [A-Za-z0-9._-]+'            # Usernames (assuming alphanumeric with _ and -)
+    'apikey=[a-zA-Z0-9_-]+'               # API keys in URLs
+    'token=[a-zA-Z0-9_-]+'                # Tokens in URLs
+    'password=[A-Za-z0-9._%+-]+'         # Passwords in URLs (may have special characters)
+    '\bSSN\b'                            # SSN (case insensitive)
+    '\bDOB\b'                            # Date of Birth (case insensitive)
+    '\bDOB:[0-9]{2}/[0-9]{2}/[0-9]{4}\b' # Date of Birth in mm/dd/yyyy format
+    '\bIP Address\b'                     # IP Address (case insensitive)
+    '\bAccess Code\b'                    # Access Code (case insensitive)
+    '\bAccess Token\b'                   # Access Token (case insensitive)
+)
+
+# Define the directories to search (add more as needed)
+search_dirs=(
+    '/etc'                          # System configuration files
+    '/home'                         # User home directories
+    '/var/www'                      # Web server directories (if applicable)
+    '/usr/local/etc'                # Additional system configuration files (if applicable)
+)
+
+for pattern in "${patterns[@]}"; do
+    echo "Searching for pattern: $pattern"
+    grep -r -E -n --color=auto "$pattern" "${search_dirs[@]}"
+done
