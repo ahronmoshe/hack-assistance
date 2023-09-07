@@ -1,18 +1,19 @@
 #!/bin/bash
 
-subnet="172.16"  # Change this to your desired Class B subnet
-start_range=1    # Change this to the starting range you want to scan
-end_range=255    # Change this to the ending range you want to scan
+class_b="192.168"  # Change this to the desired Class B network
 
-for host in $(seq $start_range $end_range); do
-    ip="$subnet.$host"
-    (
-        ping -c 1 -w 1 $ip > /dev/null 2>&1
-        if [ $? -eq 0 ]; then
-            echo "Host $ip is up"
-        fi
-    ) &
+for class_c in {0..255}; do
+    for host in {1..254}; do
+        ip="$class_b.$class_c.$host"
+        (
+            ping -c 1 -w 1 $ip > /dev/null 2>&1
+            if [ $? -eq 0 ]; then
+                echo "Host $ip is up"
+            fi
+        ) &
+    done
+    # Limit the number of concurrent background processes for better performance
+    if ((class_c % 4 == 0)); then
+        wait
+    fi
 done
-
-# Wait for all background processes to finish
-wait
