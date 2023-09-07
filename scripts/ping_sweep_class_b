@@ -16,11 +16,3 @@ done
 
 # Wait for all background processes to finish
 wait
-In this script, you specify the Class B subnet in the subnet variable and set the start_range and end_range to define the range of hosts you want to scan within that subnet. This script will scan all hosts within the specified range.
-
-Please note that scanning a large number of hosts may take a considerable amount of time and might generate a lot of network traffic, so use it responsibly and with proper authorization.
-
-
-
-
-
