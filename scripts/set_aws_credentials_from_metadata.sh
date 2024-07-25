@@ -46,3 +46,4 @@ echo "AWS credentials have been set successfully."
 
 run this with source 
 source ./set_aws_credentials_from_metadata.sh
+install jq
